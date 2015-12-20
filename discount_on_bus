@@ -2,14 +2,16 @@
 def discount_on_bus():
     price = int(input("Enter a cost of one trip: "))
     balancecard = int(input("Enter the amount you wish to card: "))
-    totaltrips = balancecard//price
-    while totaltrips>=11 and price>=12 and balancecard>1:
-        price -=2
-        balancecard -= price*11
+    totaltrips = balancecard // price
+    while totaltrips >= 11 and price >= 12 and balancecard > 1:
+        price -= 2
+        balancecard -= price * 11
         totaltrips = balancecard // price
-        balancecard = totaltrips * price
-        if price<=12 or balancecard<0:
+        if price <= 12 or balancecard < 0:
             break
-        print ("After 11 trips your balance has decreased by: {} with the new cost: {} you have enough on: {} travels.".format(balancecard,price,totaltrips))
+        print
+        ("After 11 trips your balance has decreased by: {} with the new cost:"
+         " {} you have enough on: {} travels."
+         .format(balancecard, price, totaltrips))
 if __name__ == '__main__':
     discount_on_bus()
