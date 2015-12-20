@@ -9,9 +9,11 @@ def discount_on_bus():
         totaltrips = balancecard // price
         if price <= 12 or balancecard < 0:
             break
-        print
-        ("After 11 trips your balance has decreased by: {} with the new cost:"
-         " {} you have enough on: {} travels."
-         .format(balancecard, price, totaltrips))
+        print(
+              "After 11 trips your balance has decreased by:"
+              "{} with the new cost:"
+              " {} you have enough on: {} travels."
+              .format(balancecard, price, totaltrips)
+             )
 if __name__ == '__main__':
     discount_on_bus()
