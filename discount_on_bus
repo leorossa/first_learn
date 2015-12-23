@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+Import argparse
+
+
 def discount_on_bus():
-    import argparse
     parser = argparse.ArgumentParser(description='Process to discount on bus')
     parser.add_argument(type=int, dest='price', help='Enter a cost'
                         ' of one trip')
