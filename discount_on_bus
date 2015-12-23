@@ -7,8 +7,6 @@ def discount_on_bus():
     parser.add_argument(type=int, dest='balancecard', help='Enter the amount'
                         ' you wish to card')
     args = parser.parse_args()
-    args.balancecard = balancecard
-    args.price = price
     totaltrips = balancecard // price
     while totaltrips >= 11 and price >= 12 and balancecard > 1:
         price -= 2
