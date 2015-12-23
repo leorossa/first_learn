@@ -13,8 +13,6 @@ def main():
     price = args.price
     balancecard = args.balancecard
     return price, balancecard
-
-
 def discount_on_bus():
     price, balancecard = main()
     totaltrips = balancecard // price
