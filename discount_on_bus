@@ -28,5 +28,7 @@ def discount_on_bus():
               "{} with the new cost: "
               "{} you have enough on: {} travels."
               .format(balancecard, price, totaltrips))
+
+
 if __name__ == '__main__':
     discount_on_bus()
