@@ -15,6 +15,14 @@ def main():
     return price, balancecard
 
 
+def out():
+    balancecard, price, totaltrips = discount_on_bus()
+    print("After 11 trips your balance has decreased by: "
+      "{} with the new cost: "
+      "{} you have enough on: {} travels."
+      .format(balancecard, price, totaltrips))
+
+
 def discount_on_bus():
     price, balancecard = main()
     totaltrips = balancecard // price
@@ -22,13 +30,14 @@ def discount_on_bus():
         price -= 2
         balancecard -= price * 12
         totaltrips = balancecard // price
-        if price <= 12 or balancecard < 0:
+        result = []
+        result.append(balancecard)
+        result.append(price)
+        result.append(totaltrips)
+        return result
+        if price <= 12 or balancecard <= 0:
             break
-        print("After 11 trips your balance has decreased by: "
-              "{} with the new cost: "
-              "{} you have enough on: {} travels."
-              .format(balancecard, price, totaltrips))
 
 
 if __name__ == '__main__':
-    discount_on_bus()
+    out()
